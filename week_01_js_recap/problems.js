@@ -20,7 +20,7 @@ function findMax(arr) {
   //     num > compare ? (compare = num) : null;
   //   });
 
-  //solved useing for loop with same ternary and normal if statement
+  //solved using for loop with same ternary and normal if statement
   for (let i = 0; i < arr.length; i++) {
     // arr[i]> compare ? (compare = arr[i]) : null;
     if (arr[i] > compare) {
@@ -32,6 +32,17 @@ function findMax(arr) {
 }
 
 // Check if palindrome
-function isPalindrome(word) {}
+function isPalindrome(word) {
+    //added guard just in case 
+  if (word.length === 0) {
+    return true;
+  }
+
+  return word.split("").reverse().join("").toLowerCase() === word.toLowerCase()
+    ? true
+    : false;
+}
+
+console.log(isPalindrome("racecar"));
 
 module.exports = { reverseString, findMax, isPalindrome };

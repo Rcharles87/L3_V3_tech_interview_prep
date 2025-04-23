@@ -13,4 +13,9 @@ test('findMax returns the largest number', () => {
 test('isPalindrome checks for palindrome correctly', () => {
   expect(isPalindrome('racecar')).toBe(true);
   expect(isPalindrome('hello')).toBe(false);
+  expect(isPalindrome('Racecar')).toBe(true);
+  expect(isPalindrome('')).toBe(true);
+  expect(isPalindrome('To')).toBe(false);
+  expect(isPalindrome('TtT')).toBe(true);
+  expect(isPalindrome('tooT')).toBe(true);
 });
